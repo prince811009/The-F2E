@@ -1,9 +1,5 @@
 <<<<<<< HEAD
 # The-F2E__week1__pomodoro
-
-=======
-# the-f2e__week1
-
 > a vue.js project
 
 ## Build Setup
