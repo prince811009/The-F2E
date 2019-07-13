@@ -93,14 +93,14 @@ function createWindow() {
   const alwaysOnTop = localStore.get('alwaysOnTop')
   mainWindow = new BrowserWindow({
     alwaysOnTop,
-    backgroundColor: '#2F384B',
+    backgroundColor: '#FFEDF7',
     fullscreenable: false,
     frame: false,
     icon: path.join(__static, 'icon.png'),
     resizable: false,
     useContentSize: true,
-    width: 360,
-    height: 478,
+    width: 1280,
+    height: 800,
     webPreferences: {
       nodeIntegration: true
     }

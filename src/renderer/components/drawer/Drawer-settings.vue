@@ -1,40 +1,37 @@
 <template>
   <div class="Container">
-    <p class="Drawer-heading">Settings</p>
+    <p class="Drawer-heading"></p>
     <div class="Setting-wrapper">
-      <p class="Setting-title">Always On Top</p>
       <div
         class="Checkbox"
-        @click="selectAlwaysOnTop"
-        :class="alwaysOnTop ? 'is-active' : 'is-inactive'"
+        @click="isFinished"
+        :class="isFinished ? 'is-active' : 'is-inactive'"
       ></div>
+      <p class="Setting-title">THE FIRST THING TO DO TODAY</p>
     </div>
     <div class="Setting-wrapper">
-      <p class="Setting-title">Auto-start Timer</p>
       <div
         class="Checkbox"
-        @click="selectAutoStartTimer"
-        :class="autoStartTimer ? 'is-active' : 'is-inactive'"
+        @click="isFinished"
+        :class="isFinished ? 'is-active' : 'is-inactive'"
       ></div>
+      <p class="Setting-title">THE SECOND THING TO DO TODAY</p>
     </div>
     <div class="Setting-wrapper">
-      <p class="Setting-title">Desktop Notifications</p>
       <div
         class="Checkbox"
-        @click="selectNotifications"
-        :class="notifications ? 'is-active' : 'is-inactive'"
+        @click="isFinished"
+        :class="isFinished ? 'is-active' : 'is-inactive'"
       ></div>
+      <p class="Setting-title">THE THIRD THING TO DO TODAY</p>
     </div>
-    <div
-      class="Setting-wrapper"
-      v-if="os === 'win32'"
-    >
-      <p class="Setting-title">Minimize to Tray</p>
+    <div class="Setting-wrapper">
       <div
         class="Checkbox"
-        @click="selectMinToTray"
-        :class="minToTray ? 'is-active' : 'is-inactive'"
+        @click="isFinished"
+        :class="isFinished ? 'is-active' : 'is-inactive'"
       ></div>
+      <p class="Setting-title">THE THIRD THING TO DO TODAY</p>
     </div>
   </div>
 </template>
@@ -46,62 +43,18 @@ export default {
   name: 'Drawer-settings',
 
   computed: {
-    alwaysOnTop() {
-      return this.$store.getters.alwaysOnTop
-    },
-
-    autoStartTimer() {
-      return this.$store.getters.autoStartTimer
-    },
-
-    minToTray() {
-      return this.$store.getters.minToTray
-    },
-
-    notifications() {
-      return this.$store.getters.notifications
-    },
-
-    os() {
-      return this.$store.getters.os
+    isFinished() {
+      return this.$store.getters.isFinished
     }
   },
 
   methods: {
-    selectAlwaysOnTop() {
+    isFinished() {
       const payload = {
-        key: 'alwaysOnTop',
-        val: !this.alwaysOnTop
+        key: 'isFinished',
+        val: !this.isFinished
       }
-      ipcRenderer.send('toggle-alwaysOnTop', !this.alwaysOnTop)
-      this.$store.dispatch('setSetting', payload)
-      this.$store.dispatch('setViewState', payload)
-    },
-
-    selectAutoStartTimer() {
-      const payload = {
-        key: 'autoStartTimer',
-        val: !this.autoStartTimer
-      }
-      this.$store.dispatch('setSetting', payload)
-      this.$store.dispatch('setViewState', payload)
-    },
-
-    selectMinToTray() {
-      const payload = {
-        key: 'minToTray',
-        val: !this.minToTray
-      }
-      ipcRenderer.send('toggle-minToTray', !this.minToTray)
-      this.$store.dispatch('setSetting', payload)
-      this.$store.dispatch('setViewState', payload)
-    },
-
-    selectNotifications() {
-      const payload = {
-        key: 'notifications',
-        val: !this.notifications
-      }
+      ipcRenderer.send('toggle-isFinished', !this.isFinished)
       this.$store.dispatch('setSetting', payload)
       this.$store.dispatch('setViewState', payload)
     }
@@ -119,20 +72,20 @@ export default {
   width: 16px;
   height: 16px;
   &:hover {
-    border-color: $colorRed;
+    border-color: #FF4384;
   }
   &.is-active {
-    background-color: $colorRed;
-    border-color: $colorNavy;
+    background-color: #FF4384;
+    border-color: #FF4384;
     &:hover {
-      background-color: $colorNavy;
-      border-color: $colorRed;
+      background-color: #FF4384;
+      border-color: #FF4384;
     }
   }
 }
 
 .Setting-wrapper {
-  background-color: $colorNavy;
+  border-bottom: 1px solid lightblue;
   border-radius: 4px;
   display: flex;
   justify-content: space-between;

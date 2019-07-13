@@ -39,11 +39,11 @@
               y="0px"
               viewBox="0 0 7.6 15"
               xml:space="preserve"
-              height="15px"
+              height="40px"
               class="Icon--start"
             >
               <polygon
-                fill="#F6F2EB"
+                fill="#FF4384"
                 points="0,0 0,15 7.6,7.4 "
               />
             </svg>
@@ -66,10 +66,10 @@
               y="0px"
               viewBox="0 0 7.6 15"
               xml:space="preserve"
-              height="15px"
+              height="40px"
             >
               <polygon
-                fill="#F6F2EB"
+                fill="#FF4384"
                 points="0,0 0,15 7.6,7.4 "
               />
             </svg>
@@ -92,12 +92,12 @@
               y="0px"
               viewBox="0 0 10.9 18"
               xml:space="preserve"
-              height="15px"
+              height="40px"
               class="Icon--pause"
             >
               <line
                 fill="none"
-                stroke="#F6F2EB"
+                stroke="#FF4384"
                 stroke-width="3"
                 stroke-linecap="round"
                 stroke-miterlimit="10"
@@ -108,7 +108,7 @@
               />
               <line
                 fill="none"
-                stroke="#F6F2EB"
+                stroke="#FF4384"
                 stroke-width="3"
                 stroke-linecap="round"
                 stroke-miterlimit="10"
@@ -300,29 +300,31 @@ export default {
 
 <style lang="scss" scoped>
 .Button {
-  border: 2px solid $colorBlueGrey;
+  border: 200px solid #FF4384;
+  background: white;
   border-radius: 100%;
   display: flex;
   justify-content: center;
   transition: $transitionDefault;
-  width: 50px;
-  height: 50px;
+  width: 96px;
+  height: 96px;
+  margin-top: 80px;
+  margin-left: -67px;
+
   -webkit-app-region: no-drag;
-  &:hover {
-    background-color: $colorLightNavy;
-    & .Icon--pause line {
-      stroke: $colorRed;
-    }
-    & .Icon--start polygon {
-      fill: $colorRed;
-    }
+  & .Icon--pause line {
+    stroke: #FF4384;
+  }
+  & .Icon--start polygon {
+    stroke: #FF4384;
   }
 }
 
 .Button-wrapper {
   display: flex;
-  justify-content: center;
-  margin: 20px 0 10px 0;
+  flex-direction: row;
+  align-items: center;
+  z-index: 20;
 }
 
 .Button-icon-wrapper {
@@ -332,15 +334,19 @@ export default {
 }
 
 .Dial-time {
-  font-family: 'RobotoMono', monospace;
-  font-size: 46px;
+  font-family: 'Roboto', Bold;
+  font-size: 176px;
+  color: #FF4384;
   margin: 0;
   position: absolute;
-  top: 32%;
+  top: 35%;
+  left: 0%;
 }
 
 .Timer-wrapper {
+  color: black;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  margin-left: 100px;
 }
 </style>
