@@ -12,7 +12,7 @@
 
 <script>
 import appDrawerMenu from '@/components/drawer/Drawer-menu'
-import appDrawerAbout from '@/components/drawer/Drawer-about'
+// import appDrawerAbout from '@/components/drawer/Drawer-about'
 import appDrawerSettings from '@/components/drawer/Drawer-settings'
 import appDrawerTimer from '@/components/drawer/Drawer-timer'
 
@@ -21,7 +21,7 @@ export default {
 
   components: {
     appDrawerMenu,
-    appDrawerAbout,
+    // appDrawerAbout,
     appDrawerSettings,
     appDrawerTimer
   },
@@ -40,7 +40,7 @@ export default {
   position: relative;
   width: 100%;
   height: calc(100% - 68px);
-  z-index: 1;
+  z-index: 21;
   -webkit-app-region: no-drag;
 }
 </style>

@@ -12,14 +12,14 @@
       y="0px"
       viewBox="0 0 230 230"
       xml:space="preserve"
-      width="220"
-      height="220"
+      width="540"
+      height="540"
       class="Dial-fill"
       :class="dialClass"
     >
       <path
         fill="none"
-        stroke-width="10"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-miterlimit="10"
         d="M115,5c60.8,0,110,49.2,110,110s-49.2,110-110,110S5,175.8,5,115S54.2,5,115,5"
@@ -35,8 +35,8 @@
       y="0px"
       viewBox="0 0 230 230"
       xml:space="preserve"
-      width="220"
-      height="220"
+      width="540"
+      height="540"
       class="Dial-bg"
     >
       <path
@@ -200,36 +200,40 @@ export default {
 .Dial-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 35px;
+  flex-direction: row;
+  top: 50%;
   position: relative;
 }
 
 .Dial-label {
   letter-spacing: 0.1em;
   position: absolute;
-  top: 66%;
+  top: 80%;
+  left: 30%;
   text-transform: uppercase;
 }
 
-.Dial-bg {
-  stroke: $colorBlueGrey;
-}
+// .Dial-bg {
+//   stroke: $colorBlueGrey;
+// }
 
 .Dial-fill {
   position: absolute;
   transform-origin: center;
   -webkit-app-region: no-drag;
+  left: 87%;
+  top : 10%;
 }
 
 .Dial-fill--work {
-  stroke: $colorRed;
+  stroke: #FF4384;
 }
 
 .Dial-fill--shortBreak {
-  stroke: $colorGreen;
+  stroke: #FF4384;
 }
 
 .Dial-fill--longBreak {
-  stroke: $colorBlue;
+  stroke: #FF4384;
 }
 </style>

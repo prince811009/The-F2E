@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div class="blueBox"></div>
     <app-titlebar />
     <transition
       name="slide-left"
@@ -58,5 +59,14 @@ export default {
   position: relative;
   overflow: hidden;
   height: 100vh;
+}
+
+.blueBox {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 450px;
+  height: 800px;
+  background: #003164;
 }
 </style>
