@@ -1,35 +1,58 @@
-<<<<<<< HEAD
-# The-F2E__week1__pomodoro
-精神時光屋第二屆__week1
-=======
-# the-f2e__week1
+<div align="center">
+  <img alt="Pomotroid" src=".github/images/pomotroid-title.png" width="800px">
+</div>
+<div align="center">
+  <img alt="Pomotroid in action" src=".github/images/pomotroid-screens.jpg" width="800px">
+</div>
 
-> a vue.js project
+<p align="center">Simple and visually-pleasing Pomodoro timer.</p>
 
-## Build Setup
+---
 
-``` bash
+## Overview
+
+Pomotroid is a simple and configurable Pomodoro timer. It aims to provide a visually-pleasing and reliable way to track productivity using the Pomodoro Technique.
+
+Pomotroid is in its early stages, so feedback and contributions are welcome and appreciated! :seedling:
+
+## Features
+
+- Customize times and number of rounds (persistent)
+- Charming timer alert sounds (optional)
+- Desktop notifications (optional)
+- Minimize to tray (optional)
+
+## Roadmap
+
+:memo: Future plans for enhancements and development:
+
+- Mini-mode
+
+## Download
+
+Pomotroid is available for Windows 32/64, Mac OSX and Debian/Ubuntu flavored Linux.
+
+Download the latest version from the [releases](https://github.com/Splode/pomotroid/releases) page.
+
+## Technical
+
+Pomotroid is built with [Vue.js](https://github.com/vuejs/vue), [Electron](https://github.com/electron/electron), and [electron-vue](https://github.com/SimulatedGREG/electron-vue).
+
+_Note: depending on your OS settings, you may receive a security warning upon installation. This has to do with Pomotroid being an unsigned application. You can find out more by researching code-signing for Apple and Microsoft._
+
+### Build Setup
+
+```bash
 # install dependencies
-npm install
+npm i
 
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:9080
 npm run dev
 
-# build for production with minification
+# build Pomotroid for production
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
->>>>>>> initial commit
+## License
+
+MIT &copy; [Christopher Murphy](https://github.com/Splode)
