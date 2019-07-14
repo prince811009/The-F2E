@@ -4,22 +4,21 @@
   <div
       class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--single"
       style="position: absolute; top: 0px; right: 0px;"
-      @click="toggleDrawer"
     >
       <div
         class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--right"
         style="position: absolute; top: 48px; right: 85px;"
         @click="toggleDrawer"
       >
-      <img src="../assets/list_white.png" @click="toggleDrawer">
+      <img src="../assets/list_white.png">
       </div>
 
       <div
         class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--right"
         style="position: absolute; top: 132px; right: 85px;"
-        @click="toggleChart"
+        @click="toggleDrawer"
       >
-      <img src="../assets/chart_white.png" @click="toggleChart">
+      <img src="../assets/chart_white.png">
       </div>
 
       <div
@@ -27,7 +26,7 @@
         style="position: absolute; top: 216px; right: 85px;"
         @click="toggleDrawer"
       >
-      <img src="../assets/music_white.png" @click="toggleDrawer">
+      <img src="../assets/music_white.png">
       </div>
     </div>
   </nav>

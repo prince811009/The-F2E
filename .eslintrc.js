@@ -13,6 +13,8 @@ module.exports = {
   },
   plugins: ['html'],
   rules: {
+    //空格
+    'no-tabs':'off',
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await

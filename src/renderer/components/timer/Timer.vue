@@ -138,6 +138,7 @@ import appTimerController from '@/components/timer/Timer-controller'
 import appTimerDial from '@/components/timer/Timer-dial'
 import appTimerFooter from '@/components/timer/Timer-footer'
 import { EventBus } from '@/utils/event-bus'
+import appDrawerTimer from '@/components/drawer/Drawer-timer'
 
 export default {
   components: {
@@ -146,7 +147,8 @@ export default {
     appTrayIcon,
     appTimerController,
     appTimerDial,
-    appTimerFooter
+    appTimerFooter,
+    appDrawerTimer
   },
 
   data() {
