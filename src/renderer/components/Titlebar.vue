@@ -1,48 +1,45 @@
 <template>
   <nav class="Titlebar">
     <!-- menu -->
-    <div
+  <div
       class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--single"
-      style="position: absolute;"
+      style="position: absolute; top: 0px; right: 0px;"
       @click="toggleDrawer"
     >
       <div
-        class="Menu-wrapper"
-        :class="drawerOpen ? 'is-collapsed' : ''"
+        class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--right"
+        style="position: absolute; top: 48px; right: 85px;"
+        @click="toggleDrawer"
       >
-        <div class="Menu-line"></div>
-        <div class="Menu-line"></div>
+      <img src="../assets/list_white.png" @click="toggleDrawer">
       </div>
-    </div>
 
-    <h1 class="Title">Pomodoro</h1>
-
-    <div
-      class="Icon-group"
-      style="position: absolute; top: 0; right: 0;"
-    >
       <div
-        class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--left"
-        style="padding-left: 18px"
-        @click="winMinimize"
+        class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--right"
+        style="position: absolute; top: 132px; right: 85px;"
+        @click="toggleChart"
       >
+      <img src="../assets/chart_white.png" @click="toggleChart">
+      </div>
 
+      <div
+        class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--right"
+        style="position: absolute; top: 216px; right: 85px;"
+        @click="toggleDrawer"
+      >
+      <img src="../assets/music_white.png" @click="toggleDrawer">
       </div>
     </div>
   </nav>
 </template>
 
 <script>
-import { ipcRenderer } from 'electron'
+// import { ipcRenderer } from 'electron'
 
 export default {
   computed: {
     drawerOpen() {
       return this.$store.getters.drawerOpen
-    },
-
-    minToTray() {
-      return this.$store.getters.minToTray
     }
   },
 
@@ -50,13 +47,11 @@ export default {
     toggleDrawer() {
       this.$store.dispatch('toggleDrawer')
     },
-
-    winClose() {
-      ipcRenderer.send('window-close')
+    toggleChart() {
+      this.$store.dispatch('toggleDrawer1')
     },
-
-    winMinimize() {
-      ipcRenderer.send('window-minimize', this.minToTray)
+    toggleMusic() {
+      this.$store.dispatch('toggleDrawer')
     }
   }
 }
@@ -67,8 +62,8 @@ export default {
   background-color: $colorBlueGrey;
   display: inline-block;
   transition: $transitionDefault;
-  width: 25px;
-  height: 2px;
+  width: 100px;
+  height: 300px;
   &:last-child {
     width: 15px;
   }
@@ -105,16 +100,5 @@ export default {
   text-align: center;
   height: 50px;
   -webkit-app-region: drag;
-}
-
-.Icon-wrapper--titlebar {
-  -webkit-app-region: no-drag;
-  &:hover .Menu-line {
-    background-color: $colorRed;
-  }
-  &:hover .Icon--close line,
-  &:hover .Icon--minimize line {
-    stroke: $colorRed;
-  }
 }
 </style>

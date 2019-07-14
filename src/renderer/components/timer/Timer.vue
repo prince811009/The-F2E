@@ -1,5 +1,6 @@
 <template>
   <div class="Timer-wrapper">
+    <app-timer-mission />
     <app-audio />
     <app-tray-icon />
     <app-timer-dial
@@ -130,6 +131,7 @@
 
 <script>
 import Timer from '@/utils/timer'
+import appTimerMission from '@/components/timer/Timer-mission'
 import appAudio from '@/components/Audio'
 import appTrayIcon from '@/components/TrayIcon'
 import appTimerController from '@/components/timer/Timer-controller'
@@ -140,6 +142,7 @@ import { EventBus } from '@/utils/event-bus'
 export default {
   components: {
     appAudio,
+    appTimerMission,
     appTrayIcon,
     appTimerController,
     appTimerDial,
