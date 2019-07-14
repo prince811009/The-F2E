@@ -51,7 +51,6 @@ export default {
 .Drawer-menu-wrapper {
   align-items: center;
   display: flex;
-  flex: 1 1 auto;
   justify-content: center;
   position: relative;
   transition: $transitionDefault;
