@@ -202,9 +202,9 @@ export default {
   justify-content: center;
   flex-direction: row;
   top: 50%;
-  left: -5px;
+  left: 0px;
   position: relative;
-  width: 495px;
+  width: 540px;
 }
 
 .Dial-label {
