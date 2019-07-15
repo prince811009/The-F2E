@@ -14,9 +14,7 @@
     <div class="closeWin"
     @click="toggleDrawer"
     >
-      <img src="../../assets/close_white.png"
-      @click="toggleDrawer"
-      >
+      <img src="../../assets/close_white.png">
     </div>
   </div>
 </template>

@@ -1,33 +1,28 @@
 <template>
   <nav class="Titlebar">
     <!-- menu -->
-  <div
-      class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--single"
-      style="position: absolute; top: 0px; right: 0px;"
+    <div
+      class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--right"
+      style="position: absolute; top: 48px; right: 85px;"
+      @click="toggleDrawer"
     >
-      <div
-        class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--right"
-        style="position: absolute; top: 48px; right: 85px;"
-        @click="toggleDrawer"
-      >
-      <img src="../assets/list_white.png">
-      </div>
+    <img src="../assets/list_white.png">
+    </div>
 
-      <div
-        class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--right"
-        style="position: absolute; top: 132px; right: 85px;"
-        @click="toggleDrawer"
-      >
-      <img src="../assets/chart_white.png">
-      </div>
+    <div
+      class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--right"
+      style="position: absolute; top: 132px; right: 85px;"
+      @click="toggleDrawer"
+    >
+    <img src="../assets/chart_white.png">
+    </div>
 
-      <div
-        class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--right"
-        style="position: absolute; top: 216px; right: 85px;"
-        @click="toggleDrawer"
-      >
-      <img src="../assets/music_white.png">
-      </div>
+    <div
+      class="Icon-wrapper Icon-wrapper--titlebar Icon-wrapper--double--right"
+      style="position: absolute; top: 216px; right: 85px;"
+      @click="toggleDrawer"
+    >
+    <img src="../assets/music_white.png">
     </div>
   </nav>
 </template>
@@ -99,5 +94,10 @@ export default {
   text-align: center;
   height: 50px;
   -webkit-app-region: drag;
+}
+
+.Icon-wrapper:hover {
+  padding: 16px;
+  background: lightgray;
 }
 </style>

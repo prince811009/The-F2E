@@ -31,7 +31,7 @@
         @click="isFinished"
         :class="isFinished ? 'is-active' : 'is-inactive'"
       ></div>
-      <p class="Setting-title">THE THIRD THING TO DO TODAY</p>
+      <p class="Setting-title">THE FOURTH THING TO DO TODAY</p>
     </div>
     <p class="Drawer-footer">DONE</p>
   </div>

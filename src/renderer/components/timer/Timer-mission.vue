@@ -2,7 +2,6 @@
   <div class="todolist">
    <div class="newMission">
       <input class="inputText" type="text" v-model="addText" placeholder="ADD A NEW MISSION..."/>
-      <img src="../../assets/add.png"/>
     </div>
     <div class="list">
       <ul>
@@ -17,7 +16,6 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -29,7 +27,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -46,7 +43,6 @@ export default {
   box-sizing: border-box;
   padding: 19px 226px 18px 16px;
 }
-
 .list {
   width: 445px;
   height: 32px;
@@ -60,5 +56,4 @@ export default {
   padding: 3px 182px 10px 2px;
   list-style-type: circle;
 }
-
 </style>
