@@ -1,4 +1,4 @@
-### 本作品由 Electron-vue 樣板製作，因此須執行以下步驟，請參考 [DEMO](https://www.loom.com/share/498631b6d04742d99ff5ff57c874efe7)
+### 本作品由 Electron-vue 製作，請依以下步驟執行，請參考 [DEMO](https://www.loom.com/share/498631b6d04742d99ff5ff57c874efe7)
 
 ### Build Setup
 
